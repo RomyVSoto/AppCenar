@@ -1,0 +1,37 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.navbar-toggler {
+    position: absolute;
+    right: 0;
+}
+.collapse.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.nav-link {
+    border-radius: 15%;
+}
+
+.nav-link:hover {
+    background-color: rgb(151, 151, 151);
+}
+
+.custom-gap{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}

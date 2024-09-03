@@ -1,0 +1,81 @@
+<div class="container my-5">
+    <div class="mb-5">
+        <h1 class="d-flex justify-content-center"> Inventory</h1>
+
+        <div class="col-15 col-sm-2">
+            <a href="/commerce/products/add" class="btn btn-success mb-3">+ Product</a>
+        </div>
+        {{#if products.length}}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Description</th>
+                    <th class="text-center">Category</th>
+                    <th class="text-center">Commerce</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <td class="text-center">{{this.name}}</td>
+                    <td class="text-center">{{this.price}}</td>
+                    <td class="text-center">{{this.description}}</td>
+                    <td class="text-center">{{this.Category.name}}</td> 
+                    <td class="text-center">{{this.Commerce.name}}</td> 
+
+                    <td>
+                        <div class="d-flex justify-content-center mx-auto">
+                            <a href="/products/edit/{{this.id}}" class="btn btn-warning mx-1">Edit</a>
+                            <form action="/products/delete" method="POST" class="d-inline mx-1">
+                                <input type="hidden" name="productId" value="{{id}}">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <p>No products found.</p>
+        {{/if}}
+    </div>
+
+    <div>
+        <div class="col-15 col-sm-2">
+            <a href="/commerce/category/add" class="btn btn-success mb-3">+ Category</a>
+        </div>
+        {{#if categories.length}}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Description</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each categories}}
+                <tr>
+                    <td class="text-center">{{this.name}}</td>
+                    <td class="text-center">{{this.description}}</td>
+                    <td>
+                        <div class="d-flex justify-content-center mx-auto">
+                            <a href="/category/edit/{{this.id}}" class="btn btn-warning mx-1">Edit</a>
+                            <form action="/category/delete" method="POST" class="d-inline mx-1">
+                                <input type="hidden" name="categoryId" value="{{id}}">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <p>No caregories found.</p>
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <h1 class="d-flex justify-content-center">Edit Address</h1>
+    <form action="/addresses/edit" method="POST" class="border shadow-sm p-4 rounded-3 mx-auto"
+        style="max-width: 600px;">
+        <input type="hidden" name="addressId" value="{{address.id}}">
+        <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{address.name}}" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description"
+                required>{{address.description}}</textarea>
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+            <a href="/addresses" class="btn btn-warning">Back</a>
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>
+    </form>
+</div>

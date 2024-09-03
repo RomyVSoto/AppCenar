@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h1 class="mb-5 d-flex justify-content-center">Commerces</h1>
+    <div class="row">
+        {{#each comercios}}
+        <div class="col-md-5 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4">
+                        {{#if (eq ../user.role "client")}}
+                            <a href="/commerce/{{this.id}}/products">
+                        {{/if}}
+                        <img src="{{this.picture}}" alt="{{this.name}}"
+                            class="img-fluid rounded-start card-img-left" style="height: 175px;">
+                        {{#if (eq ../user.role "client")}}
+                            </a>
+                        {{/if}}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-5">{{this.name}}</h5>
+                            <p class="card-text">
+                                <strong>Teléfono:</strong> <em class="float-end mx-2">{{this.phone}}</em><br>
+                                <strong>Hora de apertura:</strong> <em class="float-end mx-2">{{this.openingHour}}</em><br>
+                                <strong>Hora de cierre:</strong> <em class="float-end mx-2">{{this.closingHour}}</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

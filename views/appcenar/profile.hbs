@@ -1,0 +1,68 @@
+<div class="container mt-5">
+    <h1 class="d-flex justify-content-center">Profile</h1>
+
+    <div class="d-flex justify-content-center">
+
+        <!-- CLient -->
+        {{#if (eq userRole 'client')}}
+        <div class="card justify-content-center" style="width: 25rem;">
+            <img src="{{profileData.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-center"><strong><em>{{profileData.firstName}} {{profileData.lastName}}</em></strong></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Email: </strong><em>{{profileData.email}}</em></li>
+                <li class="list-group-item"><strong>Phone: </strong><em>{{profileData.phone}}</em></li>
+            </ul>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <a href="/main" class="btn btn-warning">Back</a>
+                    <a href="profile/edit-profile/{{profileData.UserId}}" class="btn btn-success mx-1">Edit</a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <!-- Commerce -->
+        {{#if (eq userRole 'commerce')}}
+        <div class="card justify-content-center" style="width: 25rem;">
+            <img src="{{profileData.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-center"><strong>{{profileData.name}}</strong></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Email: </strong><em>{{user.email}}</em></li>
+                <li class="list-group-item"><strong>Phone: <strong></strong><em>{{profileData.phone}}</em></li>
+                <li class="list-group-item"><strong>Opening Hour: </strong><em>{{profileData.openingHour}}</em></li>
+                <li class="list-group-item"><strong>Closing Hour: </strong><em>{{profileData.closingHour}}</em></li>
+            </ul>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <a href="/main" class="btn btn-warning">Back</a>
+                    <a href="profile/edit-profile/{{profileData.UserId}}" class="btn btn-success mx-1">Edit</a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <!-- Delivery -->
+        {{#if (eq userRole 'delivery')}}
+        <div class="card justify-content-center" style="width: 25rem;">
+            <img src="{{profileData.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-center"><strong><em>{{profileData.firstName}} {{profileData.lastName}}</em></strong></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Email: </strong><em>{{profileData.email}}</em></li>
+                <li class="list-group-item"><strong>Phone: </strong><em>{{profileData.phone}}</em></li>
+            </ul>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <a href="/main" class="btn btn-warning">Back</a>
+                    <a href="profile/edit-profile/{{profileData.UserId}}" class="btn btn-success mx-1">Edit</a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>

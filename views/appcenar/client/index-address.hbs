@@ -1,0 +1,27 @@
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"><strong>{{pageTitle}}</strong></h1>
+            <a href="/addresses/add" class="btn btn-success mb-3 w-100">Add Address</a>
+            {{#if addresses.length}}
+            <ul class="list-group list-group-flush">
+                {{#each addresses}}
+                <li class="list-group-item">
+                    <strong>{{name}}</strong>
+                    <p>{{description}}</p>
+                    <div class="d-flex justify-content-end">
+                        <a href="/addresses/edit/{{id}}" class="btn btn-warning btn-sm me-1">Edit</a>
+                        <form action="/addresses/delete" method="POST" class="d-inline">
+                            <input type="hidden" name="addressId" value="{{id}}">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+            <p class="text-center">No addresses found.</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

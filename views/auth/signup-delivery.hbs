@@ -1,0 +1,100 @@
+<section class="bg-light p-3 p-md-4 p-xl-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-xxl-11">
+        <div class="card border-light-subtle shadow-sm">
+          <div class="row g-0">
+            <div class="col-12 col-md-6">
+              <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy"
+                src="./assets/img/logo.jpg" alt="Delivery Registration">
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+              <div class="col-12 col-lg-11 col-xl-10">
+                <div class="card-body p-3 p-md-4 p-xl-5">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="mb-5">
+                        <h2 class="h4 text-center">Delivery Register</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <form action="/signup-delivery" method="POST" enctype="multipart/form-data">
+                      <div class="row gy-3 overflow-hidden">
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="firstName" id="firstName"
+                              placeholder="First Name" required>
+                            <label for="firstName" class="form-label">First Name</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+                            <label for="lastName" class="form-label">Last Name</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                              required>
+                            <label for="email" class="form-label">Email</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+                            <label for="phone" class="form-label">Phone</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="password" id="password"
+                              placeholder="Password" required>
+                            <label for="password" class="form-label">Password</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"
+                              placeholder="Confirm Password" required>
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-5">
+                          <div class="">
+                            <label for="picture" class="form-label">Profile Picture</label>
+                            <input type="file" class="form-control" name="picture" id="picture">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="d-grid mb-2">
+                          <button class="btn btn-dark btn-lg" type="submit">Register Delivery</button>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="col-12">
+                          <div class="d-grid mb-3">
+                            <a href="/signup" class="btn btn-outline-secondary btn-lg">Volver</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row gy-3 mt-md-4">
+                        <div class="col-12">
+                          <div class="text-center">
+                            <p>Already have an account? <a href="/login">Login</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- / .card -->
+      </div>
+    </div>
+  </div>
+</section>

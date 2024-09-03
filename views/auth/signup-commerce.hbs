@@ -1,0 +1,109 @@
+<section class="bg-light p-3 p-md-4 p-xl-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-xxl-11">
+        <div class="card border-light-subtle shadow-sm">
+          <div class="row g-0">
+            <div class="col-12 col-md-6">
+              <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy"
+                src="./assets/img/logo.jpg" alt="Commerce Registration">
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+              <div class="col-12 col-lg-11 col-xl-10">
+                <div class="card-body p-3 p-md-4 p-xl-5">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="mb-5">
+                        <h2 class="h4 text-center">Commerce Register</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <form action="/signup-commerce" method="POST" enctype="multipart/form-data">
+                      <div class="row gy-3 overflow-hidden">
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="name" id="name"
+                              placeholder="Nombre del Comercio" required>
+                            <label for="name" class="form-label">Name</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Teléfono"
+                              required>
+                            <label for="phone" class="form-label">Phone</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" name="email" id="email"
+                              placeholder="Correo Electrónico" required>
+                            <label for="email" class="form-label">Email</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="password" id="password"
+                              placeholder="Contraseña" required>
+                            <label for="password" class="form-label">Password</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="confirmPassword" id="confirm-password"
+                              value="" placeholder="Password" required>
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="time" class="form-control" name="openingHour" id="openingHour"
+                              placeholder="Hora de Apertura" required>
+                            <label for="openingHour" class="form-label">Opening Hour</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="time" class="form-control" name="closingHour" id="closingHour"
+                              placeholder="Hora de Cierre" required>
+                            <label for="closingHour" class="form-label">Closing Hour</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="file" value="" class="form-control" id="picture" name="picture"
+                              placeholder="URL del Logo (opcional)" required>
+                            <label for="picture" class="form-label">Logo (Optional)</label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-grid mb-1">
+                            <button class="btn btn-dark btn-lg" type="submit">Register Commerce</button>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="col-12">
+                            <div class="d-grid mb-3">
+                              <a href="/signup" class="btn btn-outline-secondary btn-lg">Volver</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="row">
+                      <div class="col-12">
+                        <p class="mb-0 mt-5 text-secondary text-center">Already have an account? <a href="/login"
+                            class="link-primary text-decoration-none">Sign in</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

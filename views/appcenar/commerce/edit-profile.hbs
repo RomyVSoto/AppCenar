@@ -1,0 +1,46 @@
+<div class="mt-3">
+    <h1 class="d-flex justify-content-center">Profile Edit</h1>
+
+    <form action="/profile/edit-profile" method="POST" enctype="multipart/form-data"
+        class="border shadow-sm p-4 rounded-3 mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{commerce.name}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{user.email}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">Teléfono:</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="{{commerce.phone}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="openingHour" class="form-label">Opening Hour:</label>
+            <input type="time" class="form-control" id="openingHour" name="openingHour" value="{{commerce.openingHour}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="closingHour" class="form-label">closing Hour:</label>
+            <input type="time" class="form-control" id="closingHour" name="closingHour" value="{{commerce.closingHour}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="picture" class="form-label">Logo:</label>
+            <input type="file" class="form-control" id="picture" name="picture">
+            {{#if commerce.picture}}
+            <div class="mt-2">
+                <img src="{{commerce.picture}}" alt="Commerce Logo" class="img-thumbnail" style="max-width: 100px;">
+            </div>
+            {{/if}}
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a href="/profile" class="btn btn-warning">Back</a>
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <h1 class="text-center">Admin Panel</h1>
+
+  <div class="mt-5 d-flex justify-content-center">
+    <div class="text-center custom-gap">
+      <h2>Users</h2>
+      {{#if hasClients}}
+      <ul class="list-group mt-3">
+        {{#each clients}}
+        <li class="list-group-item d-flex align-items-center">
+          <img src="{{this.picture}}" width="50" height="50" class="rounded-circle">
+          <span class="mx-5">{{this.firstName}} {{this.lastName}}</span>
+          <div class="d-flex">
+            <a href="admin/edit-user/{{this.UserId}}" class="btn btn-warning btn-sm mx-1">Edit</a>
+            <form action="/delete-user" method="POST" class="d-inline">
+              <input type="hidden" name="clientId" value="{{this.id}}">
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+      {{else}}
+      <p><em>No clients found</em></p>
+      {{/if}}
+    </div>
+
+    <div class="text-center custom-gap">
+      <h2>Commerces</h2>
+      {{#if hasCommerces}}
+      <ul class="list-group mt-3">
+        {{#each commerces}}
+        <li class="list-group-item d-flex align-items-center">
+          <img src="{{this.picture}}" width="50" height="50" class="rounded-circle">
+          <span class="mx-5">{{this.name}}</span>
+          <div class="d-flex">
+            <a href="admin/edit-commerce/{{this.id}}" class="btn btn-warning btn-sm mx-1">Edit</a>
+            <form action="/delete-commerce" method="POST" class="d-inline">
+              <input type="hidden" name="commerceId" value="{{this.id}}">
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+      {{else}}
+      <p><em>No commerces found</em></p>
+      {{/if}}
+    </div>
+
+    <div class="text-center custom-gap">
+      <h2>Deliveries</h2>
+      {{#if hasDeliveries}}
+      <ul class="list-group mt-3">
+        {{#each deliveries}}
+        <li class="list-group-item d-flex align-items-center">
+          <img src="{{this.picture}}" width="50" height="50" class="rounded-circle">
+          <span class="mx-5">{{this.firstName}} {{this.lastName}}</span>
+          <div class="d-flex">
+            <a href="/admin/edit-delivery/{{this.id}}" class="btn btn-warning btn-sm mx-1">Edit</a>
+            <form action="/delete-delivery" method="POST" class="d-inline">
+              <input type="hidden" name="deliveryId" value="{{this.id}}">
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+      {{else}}
+      <p><em>No deliveries found.</em></p>
+      {{/if}}
+    </div>
+  </div>
+</div>
